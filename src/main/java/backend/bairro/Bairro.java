@@ -1,25 +1,29 @@
 package backend.bairro;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import org.antlr.v4.runtime.misc.NotNull;
+
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
+@Entity
+@Table(name = "bairro")
 public class Bairro {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @NotNull
+
     private String nome;
-    @NotNull
+
     private BigDecimal valorIptu;
 
     public Bairro(Long id, String nome, BigDecimal valorIptu) {
         this.id = id;
         this.nome = nome;
         this.valorIptu = valorIptu;
+    }
+
+    public Bairro() {
+
     }
 
     public Long getId() {

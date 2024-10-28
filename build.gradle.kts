@@ -23,6 +23,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.projectlombok:lombok")
 	implementation("org.springframework.boot:spring-boot-starter-web-services")
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	"developmentOnly"("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")

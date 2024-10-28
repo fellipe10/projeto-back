@@ -1,22 +1,29 @@
 package backend.endereco;
 
 import backend.bairro.Bairro;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Builder
+@Table(name = "Endereço")
 public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long idEndereco;
-    @NotNull
+
     private String rua;
-    @NotNull
+
     private String complemento;
     private String numero;
-    @NotNull
+   @ManyToOne
     private Bairro bairro;
 
     public Endereco(Bairro bairro) {
