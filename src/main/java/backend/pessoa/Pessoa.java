@@ -45,6 +45,10 @@ public class Pessoa {
         this.profissao = profissao;
     }
 
+    public Pessoa() {
+
+    }
+
     public Long getIdpessoa() {
         return idpessoa;
     }

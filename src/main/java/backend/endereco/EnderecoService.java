@@ -11,7 +11,6 @@ public class EnderecoService {
     public EnderecoService(EnderecoRepository enderecoRepository) {
         this.enderecoRepository = enderecoRepository;
     }
-
     public List<Endereco> buscarendereco() {
         return enderecoRepository.findAll();
     }
