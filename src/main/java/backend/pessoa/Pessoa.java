@@ -23,20 +23,21 @@ public class Pessoa {
     @NotNull
     private String sexo;
     @NotNull
+    @Column(name = "pcd")
     private boolean portadorNecessidadeEspecial;
     @NotNull
-    private BigDecimal altura;
+    private String altura;
     @NotNull
-    private BigDecimal peso;
-    @NotNull
-    private String cpf;
+    private String peso;
     @NotNull
     private String tipoPessoa;
     @ManyToOne
     @NotNull
+    @JoinColumn(name = "idendereco")
     private Endereco endereco;
     @ManyToOne
     @NotNull
+    @JoinColumn(name = "idprofissao")
     private Profissao profissao;
 
 
@@ -82,28 +83,20 @@ public class Pessoa {
         this.portadorNecessidadeEspecial = portadorNecessidadeEspecial;
     }
 
-    public BigDecimal getAltura() {
+    public String getAltura() {
         return altura;
     }
 
-    public void setAltura(BigDecimal altura) {
+    public void setAltura(String altura) {
         this.altura = altura;
     }
 
-    public BigDecimal getPeso() {
+    public String getPeso() {
         return peso;
     }
 
-    public void setPeso(BigDecimal peso) {
+    public void setPeso(String peso) {
         this.peso = peso;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public String getTipoPessoa() {

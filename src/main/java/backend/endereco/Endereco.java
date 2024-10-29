@@ -14,23 +14,30 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Builder
-@Table(name = "Endereço")
+@Table(name = "endereco")
 public class Endereco {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "idendereco")
     private Long idEndereco;
     @NotNull
+    @Column(name = "logradouro")
     private String rua;
     @NotNull
     private String complemento;
     private String numero;
    @ManyToOne
    @NotNull
+   @JoinColumn(name = "idbairro")
     private Bairro bairro;
 
     public Endereco(Bairro bairro) {
+
         this.bairro = bairro;
+    }
+
+    public Endereco() {
     }
 
     public Long getIdEndereco() {

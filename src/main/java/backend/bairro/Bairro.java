@@ -12,6 +12,7 @@ public class Bairro {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "idbairro")
     private Long id;
     @NotNull
     private String nome;

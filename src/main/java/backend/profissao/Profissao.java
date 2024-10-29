@@ -11,17 +11,18 @@ public class Profissao {
     @Id
     @NotNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String idprofissao;
+    private int idprofissao;
     @NotNull
+    @Column(name = "nome")
     private String nomeprofissao;
     @NotNull
     private BigDecimal salario;
 
-    public String getIdprofissao() {
+    public int getIdprofissao() {
         return idprofissao;
     }
 
-    public void setIdprofissao(String idprofissao) {
+    public void setIdprofissao(int idprofissao) {
         this.idprofissao = idprofissao;
     }
 
