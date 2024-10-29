@@ -32,8 +32,8 @@ public class ProfissaoController {
         profissaoService.salvarProfissao(profissao);
         return ResponseEntity.ok(profissaoService.salvarProfissao(profissao));
     }
-    @DeleteMapping(path = "/profissao/find/{id}")
-    public ResponseEntity<Void> removerProfissao(@RequestParam long id) {
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<Void> removerProfissao(@PathVariable long id) {
         profissaoService.removerProfissao(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
