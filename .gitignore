@@ -35,8 +35,10 @@ out/
 
 ### VS Code ###
 .vscode/
-
+gradlew.bat
+.gradle
 demo.iml
 HELP.md
 .gitattributes
-.
+gradlew.bat
+settings.gradle
