@@ -2,17 +2,18 @@ package backend.pessoa;
 
 import backend.endereco.Endereco;
 import backend.profissao.Profissao;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "pessoa")
 public class Pessoa {
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long idpessoa;
     @NotNull

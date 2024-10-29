@@ -2,6 +2,7 @@ package backend.bairro;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
@@ -9,9 +10,10 @@ import java.math.BigDecimal;
 @Table(name = "bairro")
 public class Bairro {
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-
+    @NotNull
     private String nome;
 
     private BigDecimal valorIptu;

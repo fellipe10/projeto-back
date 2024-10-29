@@ -1,14 +1,15 @@
 package backend.profissao;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import org.antlr.v4.runtime.misc.NotNull;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+
 
 import java.math.BigDecimal;
-
+@Entity
+@Table(name = "profissao")
 public class Profissao {
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private String idprofissao;
     @NotNull

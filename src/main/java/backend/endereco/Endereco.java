@@ -2,6 +2,7 @@ package backend.endereco;
 
 import backend.bairro.Bairro;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,14 +17,16 @@ import lombok.NoArgsConstructor;
 @Table(name = "Endereço")
 public class Endereco {
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long idEndereco;
-
+    @NotNull
     private String rua;
-
+    @NotNull
     private String complemento;
     private String numero;
    @ManyToOne
+   @NotNull
     private Bairro bairro;
 
     public Endereco(Bairro bairro) {
