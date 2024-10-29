@@ -1,7 +1,10 @@
 package backend.pessoa;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
 public class PessoaService {
     private final PessoaRepository pessoaRepository;
 
