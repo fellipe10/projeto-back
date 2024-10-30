@@ -50,60 +50,84 @@ public class Pessoa {
 
     }
 
-    public Long getIdpessoa() {
+    public @NotNull Long getIdpessoa() {
         return idpessoa;
     }
 
-    public void setIdpessoa(Long idpessoa) {
+    public void setIdpessoa(@NotNull Long idpessoa) {
         this.idpessoa = idpessoa;
     }
-    
 
-    public LocalDate getDataNascimento() {
+    public @NotNull String getNome() {
+        return nome;
+    }
+
+    public void setNome(@NotNull String nome) {
+        this.nome = nome;
+    }
+
+    public @NotNull LocalDate getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(LocalDate dataNascimento) {
+    public void setDataNascimento(@NotNull LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
-    public String getSexo() {
+    public @NotNull String getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(@NotNull String sexo) {
         this.sexo = sexo;
     }
 
+    @NotNull
     public boolean isPortadorNecessidadeEspecial() {
         return portadorNecessidadeEspecial;
     }
 
-    public void setPortadorNecessidadeEspecial(boolean portadorNecessidadeEspecial) {
+    public void setPortadorNecessidadeEspecial(@NotNull boolean portadorNecessidadeEspecial) {
         this.portadorNecessidadeEspecial = portadorNecessidadeEspecial;
     }
 
-    public String getAltura() {
+    public @NotNull String getAltura() {
         return altura;
     }
 
-    public void setAltura(String altura) {
+    public void setAltura(@NotNull String altura) {
         this.altura = altura;
     }
 
-    public String getPeso() {
+    public @NotNull String getPeso() {
         return peso;
     }
 
-    public void setPeso(String peso) {
+    public void setPeso(@NotNull String peso) {
         this.peso = peso;
     }
 
-    public String getTipoPessoa() {
+    public @NotNull String getTipoPessoa() {
         return tipoPessoa;
     }
 
-    public void setTipoPessoa(String tipoPessoa) {
+    public void setTipoPessoa(@NotNull String tipoPessoa) {
         this.tipoPessoa = tipoPessoa;
+    }
+
+    public @NotNull Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(@NotNull Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public @NotNull Profissao getProfissao() {
+        return profissao;
+    }
+
+    public void setProfissao(@NotNull Profissao profissao) {
+        this.profissao = profissao;
     }
 }

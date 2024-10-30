@@ -19,7 +19,7 @@ public class PessoaController {
     public List<Pessoa> listar() {
         return pessoaService.findAll();
     }
-    @GetMapping(path = "{nome}")
+    @GetMapping(path = "/{nome}")
     public ResponseEntity<Pessoa> buscarPessoaPorNome(@PathVariable String nome) {
         return ResponseEntity.ok(pessoaService.findBynome(nome));
     }
@@ -27,7 +27,7 @@ public class PessoaController {
     public ResponseEntity <Pessoa> salvarPssoa(Pessoa pessoa) {
        return ResponseEntity.ok(pessoaService.salvarPessoa(pessoa));
     }
-    @DeleteMapping(path = "{id}")
+    @DeleteMapping(path = "/{id}")
     public ResponseEntity<Pessoa> apagarPessoa(@RequestParam long id) {
         pessoaService.apagarPessoa(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

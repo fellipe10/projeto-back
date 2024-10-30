@@ -19,11 +19,11 @@ public class ProfissaoController {
     public List<Profissao> listar() {
         return profissaoService.findAll();
     }
-    @GetMapping(path = "/profissao/{nome}")
+    @GetMapping(path = "/{nome}")
     public ResponseEntity<Profissao> buscarPorNome(String nome) {
        return ResponseEntity.ok(profissaoService.buscarProfissaoPorNome(nome));
     }
-    @GetMapping(path = "/profissao/{id}")
+    @GetMapping(path = "/{id}")
     public ResponseEntity<Profissao> buscarPorId(@PathVariable Long id) {
         return ResponseEntity.ok(profissaoService.buscarProfissaoPorId(id));
     }

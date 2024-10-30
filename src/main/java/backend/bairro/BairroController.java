@@ -24,14 +24,19 @@ public class BairroController {
     public List<Bairro> listar() {
         return bairroService.buscarBairros();
     }
+    @GetMapping(path = "/nome")
+    public List<Bairro> buscarBairroPorNome(@RequestParam String nome) {
+        List<Bairro> bairroList = bairroService.buscarBairroPorNome(nome);
+        return ResponseEntity.ok(bairroList).getBody();
+    }
     @GetMapping(path = "/{id}")
     public ResponseEntity<List<Bairro>> buscarPorId(@PathVariable Long id) {
         return ResponseEntity.ok(bairroService.buscarBairroPorId(id));
     }
-    @PostMapping (path = "nome")
-    public ResponseEntity<Bairro> adicionar(@RequestBody Bairro bairro) {
-        List<Bairro> bairros = bairroService.buscarBairros();
-        return ResponseEntity.ok((Bairro) bairros);
+    @PostMapping (path = "/find")
+        public ResponseEntity<Bairro> adicionar(@RequestBody Bairro bairro) {
+            List<Bairro> bairros = bairroService.buscarBairros();
+            return ResponseEntity.ok((Bairro) bairros);
     }
     @PostMapping
     public ResponseEntity<Bairro> atualizar(@RequestBody Bairro bairro) {
