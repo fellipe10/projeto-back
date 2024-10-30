@@ -16,7 +16,6 @@ public class Bairro {
     private Long id;
     @NotNull
     private String nome;
-
     private BigDecimal valorIptu;
 
     public Bairro(Long id, String nome, BigDecimal valorIptu) {
