@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/endereco")
-
+@CrossOrigin
 public class EnderecoController {
 
     private final EnderecoService enderecoService;
@@ -34,7 +34,7 @@ public class EnderecoController {
         return ResponseEntity.ok(enderecoService.buscarPorId(id));
     }
     @PostMapping
-    public ResponseEntity<Endereco> salvarEndereco(Endereco endereco) {
+    public ResponseEntity<Endereco> salvarEndereco(@RequestBody Endereco endereco) {
         return ResponseEntity.ok(enderecoService.salvarEndereco(endereco));
     }
     @DeleteMapping

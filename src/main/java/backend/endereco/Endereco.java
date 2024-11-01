@@ -26,6 +26,7 @@ public class Endereco {
     private String rua;
     @NotNull
     private String complemento;
+    private String cep;
     private String numero;
    @ManyToOne
    @NotNull
@@ -40,27 +41,27 @@ public class Endereco {
     public Endereco() {
     }
 
-    public Long getIdEndereco() {
+    public @NotNull Long getIdEndereco() {
         return idEndereco;
     }
 
-    public void setIdEndereco(Long idEndereco) {
+    public void setIdEndereco(@NotNull Long idEndereco) {
         this.idEndereco = idEndereco;
     }
 
-    public String getRua() {
+    public @NotNull String getRua() {
         return rua;
     }
 
-    public void setRua(String rua) {
+    public void setRua(@NotNull String rua) {
         this.rua = rua;
     }
 
-    public String getComplemento() {
+    public @NotNull String getComplemento() {
         return complemento;
     }
 
-    public void setComplemento(String complemento) {
+    public void setComplemento(@NotNull String complemento) {
         this.complemento = complemento;
     }
 
@@ -70,5 +71,13 @@ public class Endereco {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+
+    public @NotNull Bairro getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(@NotNull Bairro bairro) {
+        this.bairro = bairro;
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/bairro")
 @Log4j2
-
+@CrossOrigin
 public class BairroController {
 
     private final BairroService bairroService;

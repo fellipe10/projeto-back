@@ -1,5 +1,6 @@
 package backend.pessoa;
 
+import backend.bairro.Bairro;
 import backend.endereco.Endereco;
 import backend.profissao.Profissao;
 import jakarta.persistence.*;
